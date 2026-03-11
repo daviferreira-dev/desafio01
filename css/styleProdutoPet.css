@@ -1,24 +1,32 @@
+/* RESET */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Segoe UI, Arial;
+    font-family:Arial, Helvetica, sans-serif;
     }
     
+    /* BODY */
+    
     body{
-    background:#f5f5f5;
+    background:#f5f7fa;
     color:#333;
+    line-height:1.6;
     }
     
     /* HEADER */
     
     header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 50px;
     background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    padding:20px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:100;
     }
     
     .logo{
@@ -28,114 +36,214 @@
     }
     
     .logo img{
-    height:45px;
+    width:40px;
     }
     
     .logo h1{
-    color:#1f9a9c;
     font-size:22px;
+    color:#0f8a8a;
     }
     
-    nav a{
-    margin-left:20px;
-    text-decoration:none;
-    color:#333;
+    /* MAIN */
+    
+    main{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
     }
     
     /* PRODUTO */
     
-    .produto-container{
-    display:flex;
-    justify-content:center;
+    .produto{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
     align-items:center;
-    gap:60px;
-    padding:60px;
-    flex-wrap:wrap;
+    margin-bottom:80px;
     }
     
-    /* GALERIA */
+    /* IMAGEM */
     
-    #imagemPrincipal{
-    width:350px;
-    border-radius:10px;
-    transition:0.3s;
+    .imagem-produto{
+    text-align:center;
     }
     
-    #imagemPrincipal:hover{
-    transform:scale(1.05);
-    }
-    
-    .miniaturas img{
-    width:70px;
-    margin:5px;
+    #mainImg{
+    width:100%;
+    max-width:400px;
+    border-radius:12px;
+    transition:0.4s;
     cursor:pointer;
     }
     
-    /* INFO */
-    
-    .produto-info{
-    max-width:400px;
+    .thumbs{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:15px;
     }
     
-    .produto-info h2{
-    font-size:32px;
+    .thumbs img{
+    width:70px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+    }
+    
+    .thumbs img:hover{
+    transform:scale(1.1);
+    }
+    
+    /* INFO PRODUTO */
+    
+    .info-produto h2{
+    font-size:30px;
     margin-bottom:10px;
     }
     
     .preco{
     font-size:28px;
-    color:#ff6a13;
-    font-weight:bold;
+    color:#ff6b00;
     margin:10px 0;
+    font-weight:bold;
     }
     
-    .beneficios{
-    margin-top:15px;
+    .descricao{
+    margin-bottom:20px;
     }
     
-    .beneficios li{
-    margin-bottom:8px;
+    #estoque{
+    color:#e63946;
+    font-weight:bold;
+    margin-bottom:5px;
+    }
+    
+    #viewers{
+    color:#555;
+    margin-bottom:20px;
     }
     
     /* BOTÃO */
     
-    button{
-    padding:15px 30px;
-    background:#1f9a9c;
-    border:none;
+    .comprar{
+    background:#0f8a8a;
     color:white;
+    border:none;
+    padding:15px 25px;
     font-size:16px;
-    border-radius:6px;
+    border-radius:8px;
     cursor:pointer;
-    margin-top:20px;
     transition:0.3s;
     }
     
-    button:hover{
-    background:#ff6a13;
+    .comprar:hover{
+    background:#0c6f6f;
+    transform:scale(1.05);
     }
     
-    /* AVALIAÇÕES */
+    /* SEÇÃO VANTAGENS */
     
-    .avaliacoes{
+    .vantagens-section{
+    margin-top:40px;
     text-align:center;
-    padding:40px;
+    }
+    
+    .vantagens-section h2{
+    margin-bottom:30px;
+    font-size:24px;
+    }
+    
+    .vantagens{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+    }
+    
+    .vantagem{
     background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    width:220px;
+    text-align:center;
+    transition:0.3s;
+    opacity:0;
+    transform:translateY(60px);
+    }
+    
+    .vantagem:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    }
+    
+    /* REVIEWS */
+    
+    .reviews-section{
+    margin-top:80px;
+    text-align:center;
+    }
+    
+    .reviews-section h2{
+    margin-bottom:30px;
+    }
+    
+    .reviews{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
     }
     
     .review{
-    background:#f2f2f2;
-    padding:15px;
-    border-radius:8px;
-    margin:10px auto;
-    max-width:400px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    width:260px;
+    transition:0.3s;
+    opacity:0;
+    transform:translateY(60px);
+    }
+    
+    .review:hover{
+    transform:scale(1.03);
+    }
+    
+    .estrelas{
+    color:gold;
+    font-size:20px;
+    margin-bottom:10px;
+    }
+    
+    /* CLASSE QUE O JS ATIVA */
+    
+    .show{
+    opacity:1 !important;
+    transform:translateY(0) !important;
     }
     
     /* FOOTER */
     
     footer{
+    background:#0f8a8a;
+    color:white;
     text-align:center;
     padding:20px;
-    background:#1f9a9c;
-    color:white;
+    margin-top:60px;
+    }
+    
+    /* RESPONSIVO */
+    
+    @media (max-width:900px){
+    
+    .produto{
+    grid-template-columns:1fr;
+    text-align:center;
+    }
+    
+    .info-produto{
+    margin-top:20px;
+    }
+    
     }
