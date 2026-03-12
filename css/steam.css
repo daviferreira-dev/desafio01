@@ -194,7 +194,7 @@ button:hover{
 .hero{
 height:500px;
 width: auto;
-background:url('https://t.ctcdn.com.br/0uKAlgh0x2YS1liZ-6Z41PqU4Ms=/1200x675/smart/i960109.png') center/cover no-repeat;
+background:url('https://newr7-r7-prod.web.arc-cdn.net/resizer/v2/LY3PE3IS7RE5XBEPOUVRXHDOX4.jpeg?auth=d6ee00b49fe4db9afa2b002ddd337166368e0a3bba8f13731cab37d2a939b790&width=800&height=457') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -204,14 +204,22 @@ text-align:center;
 .hero h1{
 font-size:48px;
 margin-bottom:10px;
+
 }
 
 .hero p{
 font-size:20px;
 margin-bottom:20px;
+
+
 }
 .tag:hover:not(.active){
     background:#66c0f4;
     color:#0f1923;
     transform:scale(1.08);
+}
+.fundo{
+    background-color: rgba(0, 0, 0, 0.3); 
+    color: white;
+    padding: 10px;
 }

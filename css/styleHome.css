@@ -42,6 +42,10 @@
     font-weight:500;
     transition:0.3s;
     }
+
+    nav{
+        display: flex;
+    }
     
     nav a:hover{
     color:#00ffd5;
